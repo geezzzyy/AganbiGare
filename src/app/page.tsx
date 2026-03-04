@@ -1,6 +1,7 @@
 "use client"
 
 import { Hero } from "@/components/sections/hero"
+import { QuotesMarquee } from "@/components/sections/quotes-marquee"
 import { ContactSection } from "@/components/sections/contact"
 import { StaggerContainer, StaggerItem } from "@/components/ui/motion"
 import { ArrowRight, Cpu, Code2, BookOpen, Briefcase } from "lucide-react"
@@ -59,6 +60,7 @@ export default function Home() {
     return (
         <div className="flex flex-col">
             <Hero />
+            <QuotesMarquee />
 
             <section className="container mx-auto max-w-screen-xl px-4 py-24">
                 <StaggerContainer className="grid gap-8 md:grid-cols-2">
