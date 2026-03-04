@@ -15,9 +15,9 @@ export const profile = {
 export const engineeringData = {
     cvUrl: "/Gare_Aganbi_CV_(1).pdf",
     story: [
-        "I come from a medical family. My parents run a private hospital in Warri, Nigeria — a place where life and death walked the same corridors every single day. Growing up, the natural expectation was that I'd follow in their footsteps and study medicine. But I couldn't do it.",
-        "It wasn't a lack of compassion — if anything, it was the opposite. A fear of over-compassion. The few times I saw families break down in tears after losing a loved one at the hospital, I carried it home with me. I had sleepless nights. The weight of other people's grief sat on my chest in a way I knew I couldn't sustain for a lifetime. To this day, I deeply honour health workers. They are superheroes — people who face that reality daily and still show up.",
-        "So I chose a different path. Mathematics had always come naturally to me, and back then, if you were good at maths, it was simply presumed you were going to be an engineer. That presumption turned out to be spot on. In senior secondary school, I fell in love with Physics — and scored 80-something in the JAMB Physics exam. The direction was set.",
+        "I come from a medical family. My parents run a private hospital in Warri, Nigeria, a place where life and death walked the same corridors every single day. Growing up, the natural expectation was that I'd follow in their footsteps and study medicine. But I couldn't do it.",
+        "It wasn't a lack of compassion. If anything, it was the opposite. A fear of over-compassion. The few times I saw families break down in tears after losing a loved one at the hospital, I carried it home with me. I had sleepless nights. The weight of other people's grief sat on my chest in a way I knew I couldn't sustain for a lifetime. To this day, I deeply honour health workers. They are superheroes, people who face that reality daily and still show up.",
+        "So I chose a different path. Mathematics had always come naturally to me, and back then, if you were good at maths, it was simply presumed you were going to be an engineer. That presumption turned out to be spot on. In senior secondary school, I fell in love with Physics and scored 80-something in the JAMB Physics exam. The direction was set.",
         "I went on to study Electrical & Electronics Engineering at Covenant University, and what followed has been a journey through power plants, control rooms, industrial automation, and eventually into the world of data and software. The timeline below tells the rest of the story.",
     ],
     skills: [
@@ -30,8 +30,6 @@ export const engineeringData = {
         "Signal Processing & Electrical Schematics",
     ],
     certifications: [
-        "Microsoft Certified: Azure Data Engineer Associate",
-        "Microsoft Certified: Power BI Data Analyst Associate",
         "NEBOSH International General Certificate (IGC)",
     ],
     timeline: [
@@ -41,7 +39,7 @@ export const engineeringData = {
             organisation: "Covenant University",
             location: "Ota, Nigeria",
             duration: "2011 – 2016",
-            description: "Circuit Theory, Control Systems, Power Systems, Electronics. Where the foundation was laid — five years of rigorous engineering training that shaped everything that came after.",
+            description: "Circuit Theory, Control Systems, Power Systems, Electronics. Where the foundation was laid. Five years of rigorous engineering training that shaped everything that came after.",
         },
         {
             type: "work" as const,
@@ -81,7 +79,7 @@ export const engineeringData = {
             organisation: "University of Huddersfield",
             location: "Huddersfield, UK",
             duration: "2020 – 2023",
-            description: "Began doctoral research in electrical engineering. Ultimately decided to step away — the pull of building real things in the real world was stronger than the pull of academia.",
+            description: "Began doctoral research in electrical engineering. Ultimately decided to step away. The pull of building real things in the real world was stronger than the pull of academia.",
         },
         {
             type: "work" as const,
@@ -117,6 +115,10 @@ export const techData = {
         },
     ],
     expertise: ["Full-Stack & AI Development", "Data & Business Intelligence", "Cloud & DevOps"],
+    certifications: [
+        "Microsoft Certified: Azure Data Engineer Associate",
+        "Microsoft Certified: Power BI Data Analyst Associate",
+    ],
     techExperience: [
         {
             role: "Agentic Full Stack Developer",

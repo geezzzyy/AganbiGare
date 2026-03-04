@@ -1,7 +1,7 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { FadeIn } from "@/components/ui/motion"
-import { ExternalLink, Github, GraduationCap, Briefcase } from "lucide-react"
+import { ExternalLink, Github, GraduationCap, Briefcase, Award } from "lucide-react"
 import Link from "next/link"
 import { techData } from "@/lib/data"
 import type { Metadata } from "next"
@@ -43,6 +43,23 @@ export default function TechnologyPage() {
                                 <h3 className="font-semibold text-foreground">{edu.institution}</h3>
                                 <p className="text-sm text-muted-foreground">{edu.degree}</p>
                                 <p className="text-xs text-muted-foreground/70">{edu.focus}</p>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+            </FadeIn>
+
+            <FadeIn delay={0.12}>
+                <section className="space-y-6">
+                    <div className="flex items-center gap-2">
+                        <Award className="h-5 w-5 text-primary-500" />
+                        <h2 className="font-serif text-2xl font-bold">Certifications</h2>
+                    </div>
+                    <div className="grid gap-3 sm:grid-cols-2">
+                        {techData.certifications.map((cert) => (
+                            <div key={cert} className="flex items-center gap-3 rounded-lg border border-border/50 bg-surface/50 p-4">
+                                <Award className="h-5 w-5 shrink-0 text-primary-500" />
+                                <span className="text-sm font-medium">{cert}</span>
                             </div>
                         ))}
                     </div>
