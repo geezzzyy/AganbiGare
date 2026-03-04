@@ -77,16 +77,18 @@ export const faithData = {
     summary: "A quiet place for contemplation, theology, and the intersection of belief and daily life.",
     books: [
         {
-            title: "Understanding Grace",
-            description: "A deep dive into the theological foundations of modern Christianity.",
-            year: "2023",
-            link: "#",
+            title: "7 Things Every Christian Should Be Conscious Of",
+            description: "A foundational guide to the key truths every believer should carry daily — awareness that transforms how you walk, pray, and live.",
+            year: "2024",
+            downloadUrl: "/7things.pdf",
+            status: "Available" as const,
         },
         {
-            title: "Faith in the Workplace",
-            description: "Practical reflections on integrating biblical principles with professional life.",
-            year: "2021",
-            link: "#",
+            title: "Not Just Man: The Life of God in Man",
+            description: "An exploration of the divine nature at work within the believer — understanding your identity beyond the flesh.",
+            year: "Upcoming",
+            downloadUrl: null as string | null,
+            status: "Upcoming" as const,
         },
     ],
     sermons: [

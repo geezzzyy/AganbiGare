@@ -1,6 +1,8 @@
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { FadeIn } from "@/components/ui/motion"
-import { BookMarked, Video, BookOpen, ExternalLink } from "lucide-react"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { BookMarked, Video, BookOpen, ExternalLink, Download, Clock } from "lucide-react"
 import Link from "next/link"
 import { faithData } from "@/lib/data"
 import type { Metadata } from "next"
@@ -34,15 +36,27 @@ export default function FaithPage() {
                     </div>
                     <div className="grid gap-6 sm:grid-cols-2">
                         {faithData.books.map((book) => (
-                            <Link key={book.title} href={book.link}>
-                                <Card className="group cursor-pointer border-border hover:border-muted-foreground/30 bg-surface/50 transition-colors">
-                                    <CardHeader className="text-center p-8">
-                                        <div className="mb-4 text-sm font-medium text-muted-foreground">{book.year}</div>
-                                        <CardTitle className="font-serif text-2xl mb-3">{book.title}</CardTitle>
-                                        <CardDescription className="text-base leading-relaxed">{book.description}</CardDescription>
-                                    </CardHeader>
-                                </Card>
-                            </Link>
+                            <Card key={book.title} className="border-border hover:border-muted-foreground/30 bg-surface/50 transition-colors">
+                                <CardHeader className="text-center p-8 space-y-4">
+                                    <div className="flex items-center justify-center gap-2">
+                                        <Badge variant={book.status === "Available" ? "default" : "outline"}>
+                                            {book.status === "Upcoming" && <Clock className="mr-1 h-3 w-3" />}
+                                            {book.status}
+                                        </Badge>
+                                        <span className="text-sm text-muted-foreground">{book.year}</span>
+                                    </div>
+                                    <CardTitle className="font-serif text-2xl">{book.title}</CardTitle>
+                                    <CardDescription className="text-base leading-relaxed">{book.description}</CardDescription>
+                                    {book.downloadUrl && (
+                                        <Button asChild variant="outline" className="mt-2">
+                                            <a href={book.downloadUrl} download>
+                                                <Download className="mr-2 h-4 w-4" />
+                                                Download PDF
+                                            </a>
+                                        </Button>
+                                    )}
+                                </CardHeader>
+                            </Card>
                         ))}
                     </div>
                 </section>
