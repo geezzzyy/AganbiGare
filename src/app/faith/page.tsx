@@ -2,7 +2,7 @@ import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/ca
 import { FadeIn } from "@/components/ui/motion"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { BookMarked, Video, BookOpen, ExternalLink, Download, Clock } from "lucide-react"
+import { BookMarked, Video, Heart, ExternalLink, Download, Clock } from "lucide-react"
 import Link from "next/link"
 import { faithData } from "@/lib/data"
 import type { Metadata } from "next"
@@ -99,25 +99,24 @@ export default function FaithPage() {
             <div className="mx-auto w-16 h-px bg-border my-12" />
 
             <FadeIn delay={0.3}>
-                <section className="space-y-8 text-center">
+                <section className="space-y-8">
                     <div className="flex items-center gap-3 justify-center text-muted-foreground">
-                        <BookOpen className="h-5 w-5" />
-                        <h2 className="font-serif text-3xl font-bold text-foreground">Personal Psalms</h2>
+                        <Heart className="h-5 w-5" />
+                        <h2 className="font-serif text-3xl font-bold text-foreground">52 Convictions</h2>
                     </div>
-                    <div className="space-y-8">
-                        {faithData.psalms.map((psalm, i) => (
-                            <div key={i} className="space-y-3 py-6 border-b border-border/30 last:border-0">
-                                <p className="text-sm font-medium text-primary-500 tracking-wider uppercase">
-                                    {psalm.reference}
-                                </p>
-                                <blockquote className="font-serif text-xl md:text-2xl italic text-foreground/80 leading-relaxed max-w-xl mx-auto">
-                                    &ldquo;{psalm.text}&rdquo;
-                                </blockquote>
-                                <p className="text-sm text-muted-foreground max-w-md mx-auto">
-                                    {psalm.reflection}
-                                </p>
-                            </div>
-                        ))}
+                    <div className="max-h-[600px] overflow-y-auto rounded-xl border border-border/50 bg-surface/50 p-6 md:p-8 scrollbar-thin">
+                        <ol className="space-y-4">
+                            {faithData.convictions.map((conviction, i) => (
+                                <li key={i} className="flex gap-4 py-3 border-b border-border/20 last:border-0">
+                                    <span className="shrink-0 flex h-7 w-7 items-center justify-center rounded-full bg-primary-500/10 text-xs font-bold text-primary-500">
+                                        {i + 1}
+                                    </span>
+                                    <p className="text-base text-foreground/85 leading-relaxed">
+                                        {conviction}
+                                    </p>
+                                </li>
+                            ))}
+                        </ol>
                     </div>
                 </section>
             </FadeIn>

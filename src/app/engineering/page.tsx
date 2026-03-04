@@ -2,13 +2,13 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { FadeIn } from "@/components/ui/motion"
-import { Download } from "lucide-react"
+import { Download, Award } from "lucide-react"
 import { engineeringData } from "@/lib/data"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
     title: "Engineering",
-    description: "Controls & Instrumentation engineering expertise — PLC programming, SCADA systems, process automation, and industrial networking.",
+    description: "Controls & Instrumentation engineering expertise — PLC programming, SCADA/HMI, process automation, and industrial systems.",
 }
 
 export default function EngineeringPage() {
@@ -44,6 +44,20 @@ export default function EngineeringPage() {
                 </section>
             </FadeIn>
 
+            <FadeIn delay={0.15}>
+                <section className="space-y-6">
+                    <h2 className="font-serif text-2xl font-bold">Certifications</h2>
+                    <div className="grid gap-3 sm:grid-cols-3">
+                        {engineeringData.certifications.map((cert) => (
+                            <div key={cert} className="flex items-center gap-3 rounded-lg border border-border/50 bg-surface/50 p-4">
+                                <Award className="h-5 w-5 shrink-0 text-primary-500" />
+                                <span className="text-sm font-medium">{cert}</span>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+            </FadeIn>
+
             <FadeIn delay={0.2}>
                 <section className="space-y-6">
                     <h2 className="font-serif text-2xl font-bold">Experience</h2>
@@ -59,7 +73,9 @@ export default function EngineeringPage() {
                                             <CardTitle className="text-xl">{job.role}</CardTitle>
                                             <Badge variant="outline">{job.duration}</Badge>
                                         </div>
-                                        <CardDescription className="font-medium text-foreground">{job.company}</CardDescription>
+                                        <CardDescription className="font-medium text-foreground">
+                                            {job.company} <span className="text-muted-foreground font-normal">· {job.location}</span>
+                                        </CardDescription>
                                     </CardHeader>
                                     <CardContent>
                                         <p className="text-muted-foreground">{job.description}</p>

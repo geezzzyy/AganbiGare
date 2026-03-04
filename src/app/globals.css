@@ -25,7 +25,7 @@
   --font-sans: var(--font-outfit);
   --font-mono: var(--font-jetbrains-mono);
 
-  --animate-marquee: marquee 100s linear infinite;
+  --animate-marquee: marquee 180s linear infinite;
 
   @keyframes marquee {
     from {

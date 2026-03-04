@@ -1,14 +1,14 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { FadeIn } from "@/components/ui/motion"
-import { ExternalLink, Github } from "lucide-react"
+import { ExternalLink, Github, GraduationCap, Briefcase } from "lucide-react"
 import Link from "next/link"
 import { techData } from "@/lib/data"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
     title: "Technology",
-    description: "Full-stack development, software architecture, and product building — Lonia Telemedicine, Philio, and more.",
+    description: "Full-stack development, AI-integrated applications, data engineering, and product building.",
 }
 
 export default function TechnologyPage() {
@@ -22,19 +22,58 @@ export default function TechnologyPage() {
                     <p className="max-w-2xl text-lg text-muted-foreground">
                         {techData.summary}
                     </p>
+                    <div className="flex flex-wrap gap-2 pt-2">
+                        {techData.expertise.map((item) => (
+                            <Badge key={item} variant="outline">{item}</Badge>
+                        ))}
+                    </div>
                 </header>
             </FadeIn>
 
             <FadeIn delay={0.1}>
                 <section className="space-y-6">
-                    <div className="rounded-xl border border-border bg-surface p-6 shadow-sm">
-                        <h2 className="font-serif text-2xl font-bold mb-2">Education & Specialization</h2>
-                        <p className="text-muted-foreground">{techData.education}</p>
-                        <div className="mt-4 flex flex-wrap gap-2">
-                            {techData.expertise.map((item) => (
-                                <Badge key={item} variant="outline">{item}</Badge>
-                            ))}
-                        </div>
+                    <div className="flex items-center gap-2">
+                        <GraduationCap className="h-5 w-5 text-primary-500" />
+                        <h2 className="font-serif text-2xl font-bold">Education</h2>
+                    </div>
+                    <div className="grid gap-4 sm:grid-cols-3">
+                        {techData.education.map((edu) => (
+                            <div key={edu.institution} className="rounded-xl border border-border/50 bg-surface/50 p-5 space-y-2">
+                                <Badge variant="outline" className="text-xs">{edu.duration}</Badge>
+                                <h3 className="font-semibold text-foreground">{edu.institution}</h3>
+                                <p className="text-sm text-muted-foreground">{edu.degree}</p>
+                                <p className="text-xs text-muted-foreground/70">{edu.focus}</p>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+            </FadeIn>
+
+            <FadeIn delay={0.15}>
+                <section className="space-y-6">
+                    <div className="flex items-center gap-2">
+                        <Briefcase className="h-5 w-5 text-primary-500" />
+                        <h2 className="font-serif text-2xl font-bold">Tech & Data Experience</h2>
+                    </div>
+                    <div className="space-y-4">
+                        {techData.techExperience.map((job, index) => (
+                            <Card key={index} className="hover:border-primary-500/50">
+                                <CardHeader>
+                                    <div className="flex justify-between items-start flex-col sm:flex-row gap-2">
+                                        <div>
+                                            <CardTitle className="text-lg">{job.role}</CardTitle>
+                                            <CardDescription className="font-medium">
+                                                {job.company} <span className="text-muted-foreground font-normal">· {job.location}</span>
+                                            </CardDescription>
+                                        </div>
+                                        <Badge variant="outline">{job.duration}</Badge>
+                                    </div>
+                                </CardHeader>
+                                <CardContent>
+                                    <p className="text-muted-foreground text-sm">{job.description}</p>
+                                </CardContent>
+                            </Card>
+                        ))}
                     </div>
                 </section>
             </FadeIn>
