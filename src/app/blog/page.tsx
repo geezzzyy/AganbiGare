@@ -29,51 +29,62 @@ export default function BlogListingPage() {
                 </header>
             </FadeIn>
 
-            <FadeIn delay={0.1}>
-                <div className="flex flex-wrap gap-2">
-                    {categories.map((cat) => (
-                        <button
-                            key={cat}
-                            onClick={() => setActiveCategory(cat)}
-                            className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-                                activeCategory === cat
-                                    ? "bg-primary-500 text-white"
-                                    : "bg-surface-hover text-muted-foreground hover:text-foreground"
-                            }`}
-                        >
-                            {cat}
-                        </button>
-                    ))}
-                </div>
-            </FadeIn>
+            {blogData.posts.length > 0 && (
+                <FadeIn delay={0.1}>
+                    <div className="flex flex-wrap gap-2">
+                        {categories.map((cat) => (
+                            <button
+                                key={cat}
+                                onClick={() => setActiveCategory(cat)}
+                                className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                                    activeCategory === cat
+                                        ? "bg-primary-500 text-white"
+                                        : "bg-surface-hover text-muted-foreground hover:text-foreground"
+                                }`}
+                            >
+                                {cat}
+                            </button>
+                        ))}
+                    </div>
+                </FadeIn>
+            )}
 
-            <StaggerContainer className="space-y-8">
-                {filteredPosts.map((post) => (
-                    <StaggerItem key={post.slug}>
-                        <Link href={`/blog/${post.slug}`}>
-                            <Card className="group h-full cursor-pointer hover:border-black/50 dark:hover:border-white/50 transition-colors border-border/60 shadow-sm hover:shadow">
-                                <CardHeader>
-                                    <div className="flex justify-between items-start mb-3">
-                                        <Badge variant="outline" className="opacity-80 group-hover:opacity-100 transition-opacity">
-                                            {post.category}
-                                        </Badge>
-                                        <div className="flex items-center text-xs text-muted-foreground">
-                                            <Calendar className="mr-1 h-3 w-3" />
-                                            {post.date}
+            {filteredPosts.length > 0 ? (
+                <StaggerContainer className="space-y-8">
+                    {filteredPosts.map((post) => (
+                        <StaggerItem key={post.slug}>
+                            <Link href={`/blog/${post.slug}`}>
+                                <Card className="group h-full cursor-pointer hover:border-black/50 dark:hover:border-white/50 transition-colors border-border/60 shadow-sm hover:shadow">
+                                    <CardHeader>
+                                        <div className="flex justify-between items-start mb-3">
+                                            <Badge variant="outline" className="opacity-80 group-hover:opacity-100 transition-opacity">
+                                                {post.category}
+                                            </Badge>
+                                            <div className="flex items-center text-xs text-muted-foreground">
+                                                <Calendar className="mr-1 h-3 w-3" />
+                                                {post.date}
+                                            </div>
                                         </div>
-                                    </div>
-                                    <CardTitle className="text-2xl group-hover:text-primary-500 transition-colors">
-                                        {post.title}
-                                    </CardTitle>
-                                    <CardDescription className="text-base text-muted-foreground mt-2 leading-relaxed">
-                                        {post.excerpt}
-                                    </CardDescription>
-                                </CardHeader>
-                            </Card>
-                        </Link>
-                    </StaggerItem>
-                ))}
-            </StaggerContainer>
+                                        <CardTitle className="text-2xl group-hover:text-primary-500 transition-colors">
+                                            {post.title}
+                                        </CardTitle>
+                                        <CardDescription className="text-base text-muted-foreground mt-2 leading-relaxed">
+                                            {post.excerpt}
+                                        </CardDescription>
+                                    </CardHeader>
+                                </Card>
+                            </Link>
+                        </StaggerItem>
+                    ))}
+                </StaggerContainer>
+            ) : (
+                <FadeIn delay={0.1}>
+                    <div className="rounded-xl border border-dashed border-border/50 bg-surface/30 p-12 text-center space-y-3">
+                        <p className="text-lg font-medium text-foreground">Coming soon</p>
+                        <p className="text-muted-foreground">New posts are on the way. Check back later.</p>
+                    </div>
+                </FadeIn>
+            )}
         </div>
     )
 }

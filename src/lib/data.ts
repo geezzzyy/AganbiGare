@@ -269,9 +269,9 @@ export const businessData = {
     ventures: [
         {
             title: "Ongar Nig LTD",
-            role: "Founder & CEO",
-            description: "Nigerian cocoa export business focusing on premium grade sourcing, sustainable farming practices, and international supply chain logistics.",
-            metrics: ["100+ Tons Exported", "Partnered with 50+ Local Farmers"],
+            role: "Co-Founder",
+            description: "Nigerian cocoa business focused on premium grade sourcing and sustainable farming practices. Partnering with local farmers and exploring export opportunities and opportunities further down the cocoa value chain.",
+            metrics: ["Partnered with 50+ Local Farmers", "Exploring Export & Value Chain Opportunities"],
         },
         {
             title: "Lonia & Philio",
@@ -287,30 +287,12 @@ export const businessData = {
 
 export const blogData = {
     summary: "Thoughts on engineering, technology, faith, and building businesses.",
-    posts: [
-        {
-            title: "Building Reliable Systems: Lessons from SCADA to Web Apps",
-            excerpt: "What industrial automation taught me about state management and fault tolerance in modern front-end frameworks.",
-            content: "Industrial automation has been solving state management problems for decades. SCADA systems handle thousands of I/O points, maintaining consistency across distributed controllers. The patterns I learned commissioning control systems — deterministic state machines, watchdog timers, graceful degradation — translate directly to building resilient web applications. In this post, I explore how thinking like a controls engineer makes you a better software developer.",
-            date: "October 12, 2023",
-            category: "Engineering",
-            slug: "building-reliable-systems",
-        },
-        {
-            title: "The Architecture of Philio",
-            excerpt: "A deep dive into how we structured the backend to handle complex matching algorithms at scale.",
-            content: "Building a matchmaking platform isn't just about swiping. Philio's compatibility engine processes multi-dimensional preference vectors to find meaningful connections. We chose a microservices architecture with PostgreSQL for relational data and Redis for real-time matching queues. The challenge was balancing algorithmic complexity with response time — users expect instant results even when the math behind the scenes is substantial.",
-            date: "September 05, 2023",
-            category: "Technology",
-            slug: "architecture-of-philio",
-        },
-        {
-            title: "Finding Stillness in the Hustle",
-            excerpt: "Reflections on balancing faith, entrepreneurship, and the relentless pursuit of building things.",
-            content: "There's a tension between building and being still. As an entrepreneur and engineer, the drive to create, ship, and scale is relentless. But faith teaches a different rhythm — one of rest, trust, and surrender. This post is a personal reflection on how I navigate that tension, finding moments of stillness in the middle of sprint cycles and product launches.",
-            date: "August 20, 2023",
-            category: "Faith",
-            slug: "finding-stillness",
-        },
-    ],
+    posts: [] as {
+        title: string
+        excerpt: string
+        content: string
+        date: string
+        category: string
+        slug: string
+    }[],
 }
