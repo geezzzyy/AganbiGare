@@ -2,7 +2,7 @@
 
 export const profile = {
     name: "Aganbi Gare",
-    taglines: ["Controls Engineer.", "Builder.", "Author.", "Entrepreneur."],
+    taglines: ["Controls Engineer.", "Builder.", "Author.", "Entrepreneur.", "Agentic Programmer.", "IT Specialist."],
     bio: "Control Systems & Instrumentation Engineer with 9+ years of experience bridging Operational Technology and Information Technology. Deep expertise in PLC programming, SCADA/HMI configuration, and industrial process automation — complemented by capabilities in data engineering, business intelligence, and full-stack development.",
     socials: {
         github: "https://github.com/geezzzyy",
@@ -188,26 +188,7 @@ export const faithData = {
             status: "Upcoming" as const,
         },
     ],
-    sermons: [
-        {
-            title: "The Power of Stillness",
-            date: "November 2023",
-            description: "A reflection on finding peace in a chaotic world.",
-            youtubeUrl: "#", // Replace with actual YouTube URLs
-        },
-        {
-            title: "Walking by Faith",
-            date: "September 2023",
-            description: "Trusting God's plan when the path is unclear.",
-            youtubeUrl: "#",
-        },
-        {
-            title: "Grace in the Everyday",
-            date: "July 2023",
-            description: "Discovering God's grace in ordinary moments.",
-            youtubeUrl: "#",
-        },
-    ],
+    sermons: [] as { title: string; date: string; description: string; youtubeUrl: string }[],
     convictions: [
         "Jesus died. He died for my sins. Which means I died in him.",
         "Jesus rose from the dead 3 days later. I rose with him, signalling my victory over sin and the grave.",

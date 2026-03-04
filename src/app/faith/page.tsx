@@ -70,29 +70,36 @@ export default function FaithPage() {
                         <Video className="h-5 w-5" />
                         <h2 className="font-serif text-3xl font-bold text-foreground">Sermons & Messages</h2>
                     </div>
-                    <div className="grid gap-6 sm:grid-cols-1">
-                        {faithData.sermons.map((sermon) => (
-                            <Link key={sermon.title} href={sermon.youtubeUrl} target="_blank">
-                                <Card className="group cursor-pointer border-border hover:border-muted-foreground/30 bg-surface/50 transition-colors">
-                                    <CardHeader className="flex flex-row items-start gap-4 p-6">
-                                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-surface-hover">
-                                            <Video className="h-5 w-5 text-primary-500" />
-                                        </div>
-                                        <div className="space-y-1.5">
-                                            <CardTitle className="text-lg group-hover:text-primary-500 transition-colors">
-                                                {sermon.title}
-                                                <ExternalLink className="ml-2 inline h-3.5 w-3.5 opacity-0 group-hover:opacity-100 transition-opacity" />
-                                            </CardTitle>
-                                            <div className="text-sm text-muted-foreground">{sermon.date}</div>
-                                            <CardDescription className="text-base leading-relaxed">
-                                                {sermon.description}
-                                            </CardDescription>
-                                        </div>
-                                    </CardHeader>
-                                </Card>
-                            </Link>
-                        ))}
-                    </div>
+                    {faithData.sermons.length > 0 ? (
+                        <div className="grid gap-6 sm:grid-cols-1">
+                            {faithData.sermons.map((sermon) => (
+                                <Link key={sermon.title} href={sermon.youtubeUrl} target="_blank">
+                                    <Card className="group cursor-pointer border-border hover:border-muted-foreground/30 bg-surface/50 transition-colors">
+                                        <CardHeader className="flex flex-row items-start gap-4 p-6">
+                                            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-surface-hover">
+                                                <Video className="h-5 w-5 text-primary-500" />
+                                            </div>
+                                            <div className="space-y-1.5">
+                                                <CardTitle className="text-lg group-hover:text-primary-500 transition-colors">
+                                                    {sermon.title}
+                                                    <ExternalLink className="ml-2 inline h-3.5 w-3.5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                                </CardTitle>
+                                                <div className="text-sm text-muted-foreground">{sermon.date}</div>
+                                                <CardDescription className="text-base leading-relaxed">
+                                                    {sermon.description}
+                                                </CardDescription>
+                                            </div>
+                                        </CardHeader>
+                                    </Card>
+                                </Link>
+                            ))}
+                        </div>
+                    ) : (
+                        <div className="rounded-xl border border-dashed border-border/50 bg-surface/30 p-12 text-center space-y-3">
+                            <p className="text-lg font-medium text-foreground">Coming soon</p>
+                            <p className="text-muted-foreground">Sermon recordings will be added here shortly.</p>
+                        </div>
+                    )}
                 </section>
             </FadeIn>
 
