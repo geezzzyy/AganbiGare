@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { Starfield } from "@/components/ui/starfield";
 
 const dmSerifDisplay = DM_Serif_Display({
   weight: "400",
@@ -50,6 +51,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Starfield />
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
