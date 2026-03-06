@@ -15,7 +15,7 @@ export const profile = {
 export const engineeringData = {
     cvUrl: "/Gare_Aganbi_CV_(1).pdf",
     story: [
-        "I come from a medical family. My parents run a private hospital, a place where life and death walked the same corridors every single day. Growing up, the natural expectation was that I'd follow in their footsteps and study medicine. But I couldn't do it.",
+        "I come from a medical family. My parents run a private hospital. Growing up, the natural expectation was that I'd follow in their footsteps and study medicine. But I couldn't do it.",
         "It wasn't a lack of compassion. If anything, it was the opposite. A fear of over-compassion. The few times I saw families break down in tears after losing a loved one at the hospital, I carried it home with me. I had sleepless nights. The weight of other people's grief sat on my chest in a way I knew I couldn't sustain for a lifetime. To this day, I deeply honour health workers. They are superheroes, people who face that reality daily and still show up.",
         "So I chose a different path. Mathematics had always come naturally to me, and back then, if you were good at maths, it was simply presumed you were going to be an engineer. That presumption turned out to be spot on. In senior secondary school, I fell in love with Physics and scored 80-something in the JAMB Physics exam. The direction was set.",
         "I went on to study Electrical & Electronics Engineering at Covenant University, and what followed has been a journey through power plants, control rooms, industrial automation, and eventually into the world of data and software. The timeline below tells the rest of the story.",
