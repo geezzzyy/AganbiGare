@@ -10,6 +10,7 @@ import { ThemeToggle } from "./theme-toggle"
 const navLinks = [
     { href: "/engineering", label: "Engineering" },
     { href: "/technology", label: "Technology" },
+    { href: "/services", label: "Services" },
     { href: "/faith", label: "Faith" },
     { href: "/entrepreneurship", label: "Business" },
 ]

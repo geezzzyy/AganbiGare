@@ -30,6 +30,17 @@ export default function TechnologyPage() {
                 </header>
             </FadeIn>
 
+            <FadeIn delay={0.05}>
+                <section className="max-w-3xl space-y-6">
+                    <h2 className="font-serif text-2xl font-bold text-foreground">The Backstory</h2>
+                    {techData.story.map((paragraph, i) => (
+                        <p key={i} className="text-lg text-muted-foreground leading-relaxed">
+                            {paragraph}
+                        </p>
+                    ))}
+                </section>
+            </FadeIn>
+
             <FadeIn delay={0.1}>
                 <section className="space-y-6">
                     <div className="flex items-center gap-2">

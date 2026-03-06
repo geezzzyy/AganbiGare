@@ -94,6 +94,12 @@ export const engineeringData = {
 
 export const techData = {
     summary: "Full-stack development, AI-integrated applications, and data engineering — from concept through deployment.",
+    story: [
+        "I've always been drawn to technology. During my undergraduate years studying Electrical & Electronics Engineering, I taught myself SQL and Python out of sheer curiosity. Even as a Controls Engineer, the tasks I gravitated towards were the IT-adjacent ones: PLC programming, SCADA system design, and anything that involved logic and data.",
+        "But my full plunge into IT came unexpectedly. After completing my MSc in Engineering Control Systems and Instrumentation, COVID struck. I was one leg into a PhD programme, and the world had shut down. I needed to work, but the roles available were ones that didn't require my physical presence. So I called upon the skills I already had: SQL, Excel, data visualisation. I landed a role as a Bid Insight Analyst, and eventually moved into a Business Intelligence Developer position.",
+        "Those years weren't easy. I was forced to upskill rapidly in an industry I hadn't planned to enter fully at that point. But in hindsight, I'm grateful for how things turned out. The transition sharpened me in ways I didn't expect.",
+        "Today, I'm pursuing another MSc, this time in Information Systems Engineering and Management. I hope I complete this one, because between all the learning and building I do outside of school, the workload is truly a lot. But I love learning, I love building, and I love creating IT solutions. This is my field.",
+    ],
     education: [
         {
             institution: "Harrisburg University of Science and Technology",
@@ -264,6 +270,72 @@ export const businessData = {
     futureVentures: {
         teaser: "New ventures in agritech, fintech, and industrial automation consulting are on the horizon. Stay tuned for announcements.",
     },
+}
+
+export const servicesData = {
+    summary: "Professional IT services for businesses and individuals. From web design to AI-powered content creation, I help you build, grow, and automate.",
+    services: [
+        {
+            title: "Website Design & Development",
+            description: "Custom websites for businesses, portfolios, e-commerce stores, and landing pages. Built with modern frameworks, optimised for speed and mobile.",
+            icon: "Globe",
+            features: ["Business Websites", "E-Commerce", "Landing Pages", "Portfolios"],
+        },
+        {
+            title: "Email Marketing",
+            description: "Campaign setup, email template design, automation workflows, and list management using platforms like Mailchimp, ConvertKit, or Brevo.",
+            icon: "Mail",
+            features: ["Campaign Design", "Automation Flows", "List Management", "Analytics"],
+        },
+        {
+            title: "SEO & Search Optimisation",
+            description: "On-page SEO, keyword research, technical audits, and content strategy to improve search rankings and organic traffic.",
+            icon: "Search",
+            features: ["Keyword Research", "Technical Audits", "Content Strategy", "Performance Tracking"],
+        },
+        {
+            title: "Social Media Advertising",
+            description: "Paid ad campaigns across Facebook, Instagram, LinkedIn, and Google. Audience targeting, creative design, and performance tracking.",
+            icon: "Megaphone",
+            features: ["Facebook & Instagram Ads", "LinkedIn Ads", "Google Ads", "Audience Targeting"],
+        },
+        {
+            title: "AI Video Creation",
+            description: "Professional videos generated using AI tools for product demos, explainers, social media content, and promotional material.",
+            icon: "Video",
+            features: ["Product Demos", "Explainer Videos", "Social Content", "Promo Material"],
+        },
+        {
+            title: "Faceless Video Production",
+            description: "Automated YouTube, TikTok, and Instagram content using AI voiceovers, stock footage, and dynamic editing. Ideal for niche channels and passive content strategies.",
+            icon: "Film",
+            features: ["YouTube Channels", "TikTok Content", "AI Voiceovers", "Niche Automation"],
+        },
+        {
+            title: "Business Intelligence & Dashboards",
+            description: "Custom dashboards and reporting solutions using Power BI, Excel, or web-based tools to help businesses make data-driven decisions.",
+            icon: "BarChart3",
+            features: ["Power BI Dashboards", "Excel Reporting", "KPI Tracking", "Data Visualisation"],
+        },
+        {
+            title: "AI Automation & Integration",
+            description: "Streamline business workflows using AI tools, chatbots, and automation platforms. Reduce manual tasks and increase efficiency.",
+            icon: "Bot",
+            features: ["Workflow Automation", "Chatbots", "AI Integration", "Process Optimisation"],
+        },
+        {
+            title: "Brand Identity & Design",
+            description: "Logo design, brand guidelines, and visual identity packages for startups and small businesses.",
+            icon: "Palette",
+            features: ["Logo Design", "Brand Guidelines", "Visual Identity", "Colour & Typography"],
+        },
+        {
+            title: "Tech Consulting",
+            description: "One-on-one advisory for individuals or businesses looking to adopt technology, build digital products, or improve their online presence.",
+            icon: "MessageCircle",
+            features: ["Digital Strategy", "Product Advisory", "Tech Stack Selection", "Online Presence"],
+        },
+    ],
 }
 
 export const blogData = {
