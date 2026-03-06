@@ -13,6 +13,7 @@ import {
     Palette,
     MessageCircle,
     ArrowRight,
+    CreditCard,
 } from "lucide-react"
 import Link from "next/link"
 import { servicesData, profile } from "@/lib/data"
@@ -101,7 +102,7 @@ export default function ServicesPage() {
                                         </CardDescription>
                                     </div>
                                 </CardHeader>
-                                <CardContent className="flex-1">
+                                <CardContent className="flex-1 space-y-4">
                                     <div className="flex flex-wrap gap-2">
                                         {service.features.map((feature) => (
                                             <Badge key={feature} variant="secondary" className="text-xs font-normal">
@@ -109,6 +110,13 @@ export default function ServicesPage() {
                                             </Badge>
                                         ))}
                                     </div>
+                                    <Link
+                                        href={`mailto:${profile.socials.email}?subject=Enquiry: ${encodeURIComponent(service.title)}`}
+                                        className="inline-flex items-center gap-2 text-sm font-medium text-primary-500 hover:text-primary-600 transition-colors"
+                                    >
+                                        Request a Quote
+                                        <ArrowRight className="h-3.5 w-3.5" />
+                                    </Link>
                                 </CardContent>
                             </Card>
                         </StaggerItem>
@@ -122,13 +130,23 @@ export default function ServicesPage() {
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                         Whether you need a website, a dashboard, an AI solution, or a full digital strategy, let&apos;s talk about how I can help you build it.
                     </p>
-                    <Link
-                        href={`mailto:${profile.socials.email}`}
-                        className="inline-flex items-center gap-2 rounded-full bg-primary-500 px-8 py-3 text-sm font-semibold text-white hover:bg-primary-600 transition-colors"
-                    >
-                        Get in Touch
-                        <ArrowRight className="h-4 w-4" />
-                    </Link>
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <Link
+                            href={`mailto:${profile.socials.email}`}
+                            className="inline-flex items-center gap-2 rounded-full bg-primary-500 px-8 py-3 text-sm font-semibold text-white hover:bg-primary-600 transition-colors"
+                        >
+                            Get in Touch
+                            <ArrowRight className="h-4 w-4" />
+                        </Link>
+                        <Link
+                            href={servicesData.paymentLink}
+                            target="_blank"
+                            className="inline-flex items-center gap-2 rounded-full border border-border px-8 py-3 text-sm font-semibold text-foreground hover:bg-surface-hover transition-colors"
+                        >
+                            <CreditCard className="h-4 w-4" />
+                            Pay via PayPal
+                        </Link>
+                    </div>
                 </section>
             </FadeIn>
         </div>
