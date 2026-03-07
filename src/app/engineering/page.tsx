@@ -1,8 +1,7 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
 import { FadeIn } from "@/components/ui/motion"
-import { Download, Award, GraduationCap, Briefcase } from "lucide-react"
+import { Award, GraduationCap, Briefcase } from "lucide-react"
 import { engineeringData } from "@/lib/data"
 import type { Metadata } from "next"
 
@@ -19,12 +18,6 @@ export default function EngineeringPage() {
                     <h1 className="font-serif text-4xl font-bold tracking-tight md:text-5xl text-foreground">
                         Controls & Instrumentation
                     </h1>
-                    <Button asChild className="mt-2">
-                        <a href={engineeringData.cvUrl} download>
-                            <Download className="mr-2 h-4 w-4" />
-                            Download CV
-                        </a>
-                    </Button>
                 </header>
             </FadeIn>
 

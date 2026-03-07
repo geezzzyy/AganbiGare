@@ -1,7 +1,7 @@
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { FadeIn } from "@/components/ui/motion"
-import { TrendingUp, Building2, Globe, Rocket } from "lucide-react"
+import { TrendingUp, Building2, Globe, Rocket, Wrench } from "lucide-react"
 import { businessData } from "@/lib/data"
 import type { LucideIcon } from "lucide-react"
 import type { Metadata } from "next"
@@ -68,6 +68,28 @@ export default function EntrepreneurshipPage() {
                             </Card>
                         )
                     })}
+                </section>
+            </FadeIn>
+
+            <FadeIn delay={0.15}>
+                <section className="space-y-6">
+                    <h2 className="font-serif text-2xl font-bold">Coming Soon</h2>
+                    <div className="grid gap-6 md:grid-cols-2">
+                        {businessData.comingSoon.map((item) => (
+                            <Card key={item.title} className="relative overflow-hidden border-dashed">
+                                <div className="absolute right-0 top-0 -mr-4 -mt-4 opacity-5">
+                                    <Wrench className="h-32 w-32" />
+                                </div>
+                                <CardHeader className="relative z-10">
+                                    <Badge variant="outline" className="w-fit">{item.status}</Badge>
+                                    <CardTitle className="text-2xl font-bold">{item.title}</CardTitle>
+                                </CardHeader>
+                                <CardContent className="relative z-10">
+                                    <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+                                </CardContent>
+                            </Card>
+                        ))}
+                    </div>
                 </section>
             </FadeIn>
 

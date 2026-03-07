@@ -14,6 +14,7 @@ import {
     MessageCircle,
     ArrowRight,
     CreditCard,
+    Wrench,
 } from "lucide-react"
 import Link from "next/link"
 import { servicesData, profile } from "@/lib/data"
@@ -25,6 +26,7 @@ export const metadata: Metadata = {
 }
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+    Wrench,
     Globe,
     Mail,
     Search,
@@ -48,6 +50,7 @@ const accentColors = [
     "from-indigo-500/20 to-indigo-500/5 border-indigo-500/30",
     "from-pink-500/20 to-pink-500/5 border-pink-500/30",
     "from-teal-500/20 to-teal-500/5 border-teal-500/30",
+    "from-slate-500/20 to-slate-500/5 border-slate-500/30",
 ]
 
 const iconColors = [
@@ -61,6 +64,7 @@ const iconColors = [
     "text-indigo-500",
     "text-pink-500",
     "text-teal-500",
+    "text-slate-500",
 ]
 
 export default function ServicesPage() {

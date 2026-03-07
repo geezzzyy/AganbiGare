@@ -267,6 +267,13 @@ export const businessData = {
             metrics: ["Healthcare Tech", "Consumer App Development"],
         },
     ],
+    comingSoon: [
+        {
+            title: "Engineering Products E-Commerce",
+            description: "An online store for engineering equipment, instrumentation, control hardware, and industrial components. Bringing the supply chain online.",
+            status: "Coming Soon",
+        },
+    ],
     futureVentures: {
         teaser: "New ventures in agritech, fintech, and industrial automation consulting are on the horizon. Stay tuned for announcements.",
     },
@@ -276,6 +283,12 @@ export const servicesData = {
     summary: "Professional IT services for businesses and individuals. From web design to AI-powered content creation, I help you build, grow, and automate.",
     paymentLink: "https://www.paypal.me/OAganbi",
     services: [
+        {
+            title: "Engineering Equipment & Components",
+            description: "Supply of industrial engineering equipment and components — instrumentation, control system hardware, electrical parts, and automation accessories for plants and projects.",
+            icon: "Wrench",
+            features: ["Instrumentation", "Control Hardware", "Electrical Components", "Automation Parts"],
+        },
         {
             title: "Website Design & Development",
             description: "Custom websites for businesses, portfolios, e-commerce stores, and landing pages. Built with modern frameworks, optimised for speed and mobile.",
