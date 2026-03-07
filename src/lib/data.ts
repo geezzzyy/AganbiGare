@@ -15,10 +15,8 @@ export const profile = {
 export const engineeringData = {
     cvUrl: "/Gare_Aganbi_CV_(1).pdf",
     story: [
-        "I come from a medical family. My parents run a private hospital. Growing up, the natural expectation was that I'd follow in their footsteps and study medicine. But I couldn't do it.",
-        "It wasn't a lack of compassion. If anything, it was the opposite. A fear of over-compassion. The few times I saw families break down in tears after losing a loved one at the hospital, I carried it home with me. I had sleepless nights. The weight of other people's grief sat on my chest in a way I knew I couldn't sustain for a lifetime. To this day, I deeply honour health workers. They are superheroes, people who face that reality daily and still show up.",
-        "So I chose a different path. Mathematics had always come naturally to me, and back then, if you were good at maths, it was simply presumed you were going to be an engineer. That presumption turned out to be spot on. In senior secondary school, I fell in love with Physics and scored 80-something in the JAMB Physics exam. The direction was set.",
-        "I went on to study Electrical & Electronics Engineering at Covenant University, and what followed has been a journey through power plants, control rooms, industrial automation, and eventually into the world of data and software. The timeline below tells the rest of the story.",
+        "I come from a medical family. My parents run a private hospital. Growing up, the expectation was that I'd follow in their footsteps, but medicine wasn't my path. I was drawn to mathematics and physics instead, and in senior secondary school, a strong performance in the JAMB Physics exam confirmed the direction.",
+        "I went on to study Electrical & Electronics Engineering at Covenant University. From there, the journey took me through power plants, control rooms, and industrial automation, eventually opening the door to data and software. The timeline below tells the rest of the story.",
     ],
     skills: [
         "PLC Programming (Allen-Bradley, Mitsubishi)",
@@ -74,14 +72,6 @@ export const engineeringData = {
             description: "PLC Programming, SCADA Design, Control Theory, MATLAB/Simulink. A deep dive into the theory and practice of control engineering at a postgraduate level.",
         },
         {
-            type: "education" as const,
-            title: "PhD, Electrical Engineering (Dropped Out)",
-            organisation: "University of Huddersfield",
-            location: "Huddersfield, UK",
-            duration: "2020 – 2023",
-            description: "Began doctoral research in electrical engineering. Ultimately decided to step away. The pull of building real things in the real world was stronger than the pull of academia.",
-        },
-        {
             type: "work" as const,
             title: "Quality Control Analyst",
             organisation: "Cummins Turbo Technologies",
@@ -95,10 +85,9 @@ export const engineeringData = {
 export const techData = {
     summary: "Full-stack development, AI-integrated applications, and data engineering — from concept through deployment.",
     story: [
-        "I've always been drawn to technology. During my undergraduate years studying Electrical & Electronics Engineering, I taught myself SQL and Python out of sheer curiosity. Even as a Controls Engineer, the tasks I gravitated towards were the IT-adjacent ones: PLC programming, SCADA system design, and anything that involved logic and data.",
-        "But my full plunge into IT came unexpectedly. After completing my MSc in Engineering Control Systems and Instrumentation, COVID struck. I was one leg into a PhD programme, and the world had shut down. I needed to work, but the roles available were ones that didn't require my physical presence. So I called upon the skills I already had: SQL, Excel, data visualisation. I landed a role as a Bid Insight Analyst, and eventually moved into a Business Intelligence Developer position.",
-        "Those years weren't easy. I was forced to upskill rapidly in an industry I hadn't planned to enter fully at that point. But in hindsight, I'm grateful for how things turned out. The transition sharpened me in ways I didn't expect.",
-        "Today, I'm pursuing another MSc, this time in Information Systems Engineering and Management. I hope I complete this one, because between all the learning and building I do outside of school, the workload is truly a lot. But I love learning, I love building, and I love creating IT solutions. This is my field.",
+        "Technology has always been part of how I think. During my undergraduate years in Electrical & Electronics Engineering, I taught myself SQL and Python. Even as a Controls Engineer, the work I gravitated towards was IT-adjacent: PLC programming, SCADA design, and anything involving logic and data.",
+        "The full transition into IT came after COVID. I had just completed my MSc in Engineering Control Systems and Instrumentation when the world shut down. I needed work that didn't require my physical presence, so I leaned into the skills I already had: SQL, Excel, data visualisation. That led to a role as a Bid Insight Analyst, then a Business Intelligence Developer position. The shift demanded rapid upskilling, but in hindsight, it sharpened me in ways I didn't expect.",
+        "Today, I'm pursuing an MSc in Information Systems Engineering and Management. Alongside my studies, I'm collaborating with some incredible individuals to build solutions across engineering supply, IT services, and other ventures. I love learning, I love building, and I love creating IT solutions. This is my field.",
     ],
     education: [
         {
