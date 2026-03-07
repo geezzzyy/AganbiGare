@@ -269,7 +269,7 @@ export const businessData = {
 }
 
 export const servicesData = {
-    summary: "Professional IT services for businesses and individuals. From web design to AI-powered content creation, I help you build, grow, and automate.",
+    summary: "Professional engineering and IT services for businesses and individuals. From equipment supply to web design and AI-powered content creation, I help you build, grow, and automate.",
     paymentLink: "https://www.paypal.me/OAganbi",
     services: [
         {

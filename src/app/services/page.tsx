@@ -21,8 +21,8 @@ import { servicesData, profile } from "@/lib/data"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "IT Services",
-    description: "Professional IT services — website design, email marketing, SEO, AI video creation, dashboards, and more.",
+    title: "Services",
+    description: "Professional engineering and IT services — equipment supply, website design, email marketing, SEO, AI video creation, dashboards, and more.",
 }
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -76,7 +76,7 @@ export default function ServicesPage() {
                         Available for hire
                     </Badge>
                     <h1 className="font-serif text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
-                        IT Services
+                        Services
                     </h1>
                     <p className="text-lg text-muted-foreground leading-relaxed">
                         {servicesData.summary}
